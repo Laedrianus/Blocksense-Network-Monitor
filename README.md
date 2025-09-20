@@ -1,13 +1,9 @@
 # Blocksense Network Monitor
 
-<<<<<<< HEAD
-This application provides a comprehensive dashboard to monitor the BlockSense network, its data feeds, and related GitHub activity. It offers real-time updates, advanced filtering, and insightful visualizations to understand the network's health and performance.
-=======
 ## English
 
 ### Overview
 Blocksense Network Monitor is a comprehensive web application designed to track and monitor the Blocksense Network ecosystem. This application provides real-time updates, network analytics, and detailed information about the Blocksense oracle network.
->>>>>>> dbf623f ( Mobile view improvements have been made. Episodes 4, 5, and 6 of the Community Calls have been added. The README page has also been updated in both Turkish and English. The site version has been updated to v1.4.0)
 
 ### Features
 

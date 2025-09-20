@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Blocksense Network Monitor</title>
+    <title>Blocksense Network Monitor - Track Oracle Data Feeds & Network Updates</title>
+    <meta name="description" content="Monitor Blocksense Network with real-time updates, 700+ data feeds, 74 networks, GitHub integration, and advanced filtering. Track oracle performance and cross-chain data flows."/>
+    <meta name="keywords" content="blocksense, oracle, blockchain, data feeds, network monitor, cross-chain, ZK proofs"/>
+    <meta name="author" content="Blocksense Network"/>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blocksense Network Monitor"/>
+    <meta property="og:description" content="Monitor Blocksense Network with real-time updates, 700+ data feeds, and advanced analytics"/>
+    <meta property="og:image" content="pirate.png"/>
+    <meta property="og:type" content="website"/>
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Blocksense Network Monitor"/>
+    <meta name="twitter:description" content="Monitor Blocksense Network with real-time updates and analytics"/>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <!-- Hard-looking font for the whole app -->
@@ -54,39 +68,82 @@
                 </div>
                 <!-- Quick Links - Başlığın hemen altında, sola dayalı -->
                 <div class="quick-links compact">
-                    <div class="link-item">
-                        <a href="https://blocksense.network/" target="_blank" rel="noopener"><span class="quick-link-text">Web</span></a>
+                    <!-- Desktop view - normal flex layout -->
+                    <div class="quick-links-desktop">
+                        <div class="link-item">
+                            <a href="https://blocksense.network/" target="_blank" rel="noopener"><span class="quick-link-text">Web</span></a>
+                        </div>
+                        <div class="link-item">
+                            <a href="https://discord.com/invite/blocksense" target="_blank" rel="noopener"><span class="quick-link-text">Discord</span></a>
+                        </div>
+                        <div class="link-item">
+                            <a href="https://t.me/BlocksenseNetwork" target="_blank" rel="noopener"><span class="quick-link-text">Telegram</span></a>
+                        </div>
+                        <div class="link-item">
+                            <a href="https://docs.blocksense.network/" target="_blank" rel="noopener"><span class="quick-link-text">Docs</span></a>
+                        </div>
+                        <div class="link-item">
+                            <a href="https://github.com/blocksense-network/blocksense/" target="_blank" rel="noopener"><span class="quick-link-text">Github</span></a>
+                        </div>
+                        <div class="link-item">
+                            <a href="https://www.linkedin.com/company/blocksense-network/posts/?feedView=all" target="_blank" rel="noopener"><span class="quick-link-text">LinkedIn</span></a>
+                        </div>
+                        <div class="link-item">
+                            <a href="https://www.youtube.com/@BlocksenseNetwork/videos?app=desktop" target="_blank" rel="noopener"><span class="quick-link-text">Youtube</span></a>
+                        </div>
+                        <!-- Yeni: X (Twitter) bağlantısı -->
+                        <div class="link-item">
+                            <a href="https://x.com/blocksense_" target="_blank" rel="noopener"><span class="quick-link-text">X</span></a>
+                        </div>
+                        <!-- Yeni: Info & How To bağlantısı - kırmızı ve kalın (CSS ile) -->
+                        <!-- Sorun 3: target="_blank" kaldırıldı -->
+                        <div class="link-item">
+                            <a href="info-howto.html" rel="noopener"><span class="quick-link-text">Info & How To</span></a>
+                        </div>
+                        <!-- YENİ: Sadece mobilde görünen Litepaper bağlantısı -->
+                        <div class="link-item mobile-only-link">
+                            <a href="https://blocksense.network/resources/litepaper#litepaper" target="_blank" rel="noopener"><span class="quick-link-text">LITEPAPER</span></a>
+                        </div>
                     </div>
-                    <div class="link-item">
-                        <a href="https://discord.com/invite/blocksense" target="_blank" rel="noopener"><span class="quick-link-text">Discord</span></a>
-                    </div>
-                    <div class="link-item">
-                        <a href="https://t.me/BlocksenseNetwork" target="_blank" rel="noopener"><span class="quick-link-text">Telegram</span></a>
-                    </div>
-                    <div class="link-item">
-                        <a href="https://docs.blocksense.network/" target="_blank" rel="noopener"><span class="quick-link-text">Docs</span></a>
-                    </div>
-                    <div class="link-item">
-                        <a href="https://github.com/blocksense-network/blocksense/" target="_blank" rel="noopener"><span class="quick-link-text">Github</span></a>
-                    </div>
-                    <div class="link-item">
-                        <a href="https://www.linkedin.com/company/blocksense-network/posts/?feedView=all" target="_blank" rel="noopener"><span class="quick-link-text">LinkedIn</span></a>
-                    </div>
-                    <div class="link-item">
-                        <a href="https://www.youtube.com/@BlocksenseNetwork/videos?app=desktop" target="_blank" rel="noopener"><span class="quick-link-text">Youtube</span></a>
-                    </div>
-                    <!-- Yeni: X (Twitter) bağlantısı -->
-                    <div class="link-item">
-                        <a href="https://x.com/blocksense_" target="_blank" rel="noopener"><span class="quick-link-text">X</span></a>
-                    </div>
-                    <!-- Yeni: Info & How To bağlantısı - kırmızı ve kalın (CSS ile) -->
-                    <!-- Sorun 3: target="_blank" kaldırıldı -->
-                    <div class="link-item">
-                        <a href="info-howto.html" rel="noopener"><span class="quick-link-text">Info & How To</span></a>
-                    </div>
-                    <!-- YENİ: Sadece mobilde görünen Litepaper bağlantısı -->
-                    <div class="link-item mobile-only-link">
-                        <a href="https://blocksense.network/resources/litepaper#litepaper" target="_blank" rel="noopener"><span class="quick-link-text">LITEPAPER</span></a>
+                    
+                    <!-- Mobile view - dropdown layout -->
+                    <div class="quick-links-mobile">
+                        <button class="quick-links-dropdown-toggle" id="quickLinksToggle">
+                            <span>Quick Links</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="quick-links-dropdown-content" id="quickLinksDropdown">
+                            <div class="link-item">
+                                <a href="https://blocksense.network/" target="_blank" rel="noopener"><span class="quick-link-text">Web</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://discord.com/invite/blocksense" target="_blank" rel="noopener"><span class="quick-link-text">Discord</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://t.me/BlocksenseNetwork" target="_blank" rel="noopener"><span class="quick-link-text">Telegram</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://docs.blocksense.network/" target="_blank" rel="noopener"><span class="quick-link-text">Docs</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://github.com/blocksense-network/blocksense/" target="_blank" rel="noopener"><span class="quick-link-text">Github</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://www.linkedin.com/company/blocksense-network/posts/?feedView=all" target="_blank" rel="noopener"><span class="quick-link-text">LinkedIn</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://www.youtube.com/@BlocksenseNetwork/videos?app=desktop" target="_blank" rel="noopener"><span class="quick-link-text">Youtube</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://x.com/blocksense_" target="_blank" rel="noopener"><span class="quick-link-text">X</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="info-howto.html" rel="noopener"><span class="quick-link-text">Info & How To</span></a>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://blocksense.network/resources/litepaper#litepaper" target="_blank" rel="noopener"><span class="quick-link-text">LITEPAPER</span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -576,7 +633,7 @@
                 Made By Laedrianus with love for Blocksense Network
             </div>
             <!-- App Version bilgisi -->
-            <div class="app-version">App Version: v1.2.0</div> <!-- Statik olarak tanımlandı -->
+            <div class="app-version">App Version: v1.4.0</div> <!-- Statik olarak tanımlandı -->
         </div>
     </div> <!-- .container kapanışı -->
     <!-- Yukarı Çık Butonu -->
@@ -593,7 +650,9 @@
             <div id="networkDetailContent"></div>
         </div>
     </div>
-    <script src="data.js"></script>
-    <script src="script.js"></script> <!-- Güncellenmiş script.js -->
+    <script src="config.js?v=1.4.0"></script>
+    <script src="notifications.js?v=1.4.0"></script>
+    <script src="data.js?v=1.4.0"></script>
+    <script src="script.js?v=1.4.0"></script> <!-- Güncellenmiş script.js -->
 </body>
 </html>
