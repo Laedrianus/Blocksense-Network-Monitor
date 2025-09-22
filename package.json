@@ -1,0 +1,25 @@
+{
+  "name": "blocksense-community-calls",
+  "version": "1.0.0",
+  "description": "Blocksense Community Calls Website with GitHub Integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "test": "echo \"No tests specified\""
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": [
+    "blocksense",
+    "community",
+    "calls",
+    "github",
+    "integration"
+  ],
+  "author": "Blocksense Network",
+  "license": "MIT"
+}

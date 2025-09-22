@@ -1,0 +1,40 @@
+name: Update Data Feeds
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Her 6 saatte bir
+  workflow_dispatch:  # Manuel çalıştırma
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Fetch GitHub data and update data.js
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        node scripts/update-data-feeds.js
+    
+    - name: Create notification
+      run: |
+        node scripts/create-notification.js
+    
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data.js
+        git commit -m "feat: Auto-update data feeds from GitHub" || exit 0
+        git push
