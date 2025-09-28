@@ -49,7 +49,12 @@ function updateEcosystemStats() {
 async function updateTopAssets() {
     try {
         // GitHub Public API'den commit'leri çek (60/hour rate limit)
-        const response = await fetch('https://api.github.com/repos/blocksense-network/safe-singleton-factory/commits?per_page=100');
+        const response = await fetch('https://api.github.com/repos/blocksense-network/safe-singleton-factory/commits?per_page=100', {
+            headers: {
+                'Accept': 'application/vnd.github.v3+json',
+                'User-Agent': 'Blocksense-Monitor'
+            }
+        });
         let commitsJson;
         try {
             commitsJson = await response.json();
@@ -113,7 +118,12 @@ async function updateTopAssets() {
 async function updateMostRequestedFeeds() {
     try {
         // GitHub Public API'den commit'leri çek (60/hour rate limit)
-        const response = await fetch('https://api.github.com/repos/blocksense-network/safe-singleton-factory/commits?per_page=100');
+        const response = await fetch('https://api.github.com/repos/blocksense-network/safe-singleton-factory/commits?per_page=100', {
+            headers: {
+                'Accept': 'application/vnd.github.v3+json',
+                'User-Agent': 'Blocksense-Monitor'
+            }
+        });
         let commitsJson;
         try {
             commitsJson = await response.json();

@@ -901,22 +901,42 @@ async function loadGitHubUpdates() {
 
 // GitHub URL'lerindeki boşluklar kaldırıldı
 async function fetchGitHubCommits() {
-    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/commits?per_page=10');
+    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/commits?per_page=10', {
+        headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Blocksense-Monitor'
+        }
+    });
     if (!response.ok) throw new Error('GitHub API error');
     return response.json();
 }
 async function fetchGitHubIssues() {
-    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/issues?per_page=10');
+    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/issues?per_page=10', {
+        headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Blocksense-Monitor'
+        }
+    });
     if (!response.ok) throw new Error('GitHub API error');
     return response.json();
 }
 async function fetchGitHubPullRequests() {
-    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/pulls?per_page=10');
+    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/pulls?per_page=10', {
+        headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Blocksense-Monitor'
+        }
+    });
     if (!response.ok) throw new Error('GitHub API error');
     return response.json();
 }
 async function fetchGitHubReleases() {
-    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/releases?per_page=10');
+    const response = await fetch('https://api.github.com/repos/blocksense-network/blocksense/releases?per_page=10', {
+        headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Blocksense-Monitor'
+        }
+    });
     if (!response.ok) throw new Error('GitHub API error');
     return response.json();
 }
