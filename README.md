@@ -1,4 +1,4 @@
-# Blocksense Network Monitor 
+# Blocksense Network Monitor
 
 ## English
 
