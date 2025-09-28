@@ -57,7 +57,7 @@ const CONFIG = {
         },
         {
             title: "Cross-Chain Compatibility", 
-            content: "Supporting 74+ networks with seamless cross-chain data feeds and oracle services.",
+            content: "Supporting 79+ networks with seamless cross-chain data feeds and oracle services.",
             source: "https://blocksense.network/#networks"
         }
     ]

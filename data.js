@@ -1,6 +1,6 @@
 // data.js
 
-// Ağ Listesi (74 ağ)
+// Ağ Listesi (79+ ağ)
 const NETWORKS = [
     { id: 1, name: "Ethereum Mainnet" },
     { id: 2, name: "BNB Smart Chain" },
@@ -82,7 +82,7 @@ const NETWORKS = [
 // Gerçek adresler her ağ için farklı olabilir, burada örnek olarak aynı adresleri kullandım
 // Gerçek uygulamada her ağ için doğru adresleri sağlamanız gerekir
 const NETWORK_CONTRACTS = {};
-for (let i = 1; i <= 74; i++) {
+for (let i = 1; i <= 79; i++) {
     NETWORK_CONTRACTS[i] = {
         UpgradeableProxyADFS: "0xADF5aadbe080819209BF641fDf03748bb495c6f3",
         AggregatedDataFeedStore: "0x6bF1BF2765A1644554CB6060d964FA7ce2FBe6eA",

@@ -654,7 +654,7 @@ async function checkBlocksenseUpdates() {
             },
             {
                 title: "🌐 Multi-Chain Architecture",
-                content: "Supporting 74+ blockchain networks including Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Linea, Scroll, Mantle, and many more with seamless cross-chain compatibility.",
+                content: "Supporting 79+ blockchain networks including Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Linea, Scroll, Mantle, and many more with seamless cross-chain compatibility.",
                 source: url + "#networks"
             },
             {
