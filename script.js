@@ -1,4 +1,4 @@
-// Global variables
+// Global variables //
 let previousContent = "";
 let currentResults = [];
 let lastBlocksenseChanges = [];
