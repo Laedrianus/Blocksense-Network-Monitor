@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <!-- Cache Kontrolü - Sayfa her açılışta taze yükleme -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <!-- GÜÇLÜ Cache Kontrolü - Sayfa her açılışta taze yükleme -->
+    StaticFiles: 1.2.3
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
+    <meta name="cache-buster" content="version-2025-01-27-01"/>
+    
+    <!-- JavaScript dosyaları için cache busting -->
+    <script>
+        window.cacheVersion = '2025-01-27-01';
+        document.addEventListener('DOMContentLoaded', function() {
+            const scripts = document.querySelectorAll('script[src]');
+            scripts.forEach(script => {
+                if (script.src.includes('script.js')) {
+                    script.src = script.src.split('?')[0] + '?v=' + window.cacheVersion;
+                }
+            });
+        });
+    </script>
     
     <title>Blocksense Network Monitor - Track Oracle Data Feeds & Network Updates</title>
     <meta name="description" content="Monitor Blocksense Network with real-time updates, 700+ data feeds, 79+ networks, GitHub integration, and advanced filtering. Track oracle performance and cross-chain data flows."/>
