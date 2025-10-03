@@ -1,0 +1,26 @@
+name: Auto Deploy on Push
+
+# Push event tetikleyicisi
+on:
+  push:
+    branches:
+      - main   # sadece main branch'e push edildiğinde çalışacak
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Kodları çek
+      - uses: actions/checkout@v4
+
+      # Deploy komutları (sunucuya SCP ile gönderim örneği)
+      - name: Deploy to Server
+        env:
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        run: |
+          echo "Deploy başlatıldı..."
+          scp -r * $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+          echo "Deploy tamamlandı."
