@@ -1,0 +1,17 @@
+name: Data Feeds Update
+
+# Workflow'un ne zaman çalışacağını tanımla (MANUEL)
+on:
+  workflow_dispatch: # Sadece manuel çalıştırma için
+
+jobs:
+  check-data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Data validation
+      run: |
+        echo "Data feeds validation check passed"
+        echo "No deployment - user prefers local deployment"

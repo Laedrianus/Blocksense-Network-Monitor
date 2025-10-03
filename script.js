@@ -1257,4 +1257,35 @@ function initMobileDropdown() {
             }
         });
     }
+}// Cache kontrolü ve otomatik refresh özelliği
+function initCacheControl() {
+    // Sayfa focus olduğunda Service Worker'ı kontrol et
+    window.addEventListener('focus', function() {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                registrations.forEach(function(registration) {
+                    registration.update(); // Service Worker'ı güncelle
+                });
+            });
+        }
+        
+        console.log('🔄 Cache kontrolü yapıldı, fresh content için güncelleme kontrol edildi');
+    });
+    
+    // Service Worker güncellemesi kontrolü
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.ready.then(function(registration) {
+            registration.addEventListener('updatefound', function() {
+                console.log('🔄 Service Worker güncellendi, sayfa yenileniyor...');
+                setTimeout(() => {
+                    window.location.reload(true);
+                }, 2000);
+            });
+        });
+    }
 }
+
+// Sayfa yüklendiğinde cache kontrolünü başlat
+document.addEventListener('DOMContentLoaded', function() {
+    initCacheControl();
+});
