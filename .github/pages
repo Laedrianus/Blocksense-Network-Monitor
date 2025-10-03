@@ -1,0 +1,4 @@
+cache-control: no-cache, no-store, must-revalidate
+pragma: no-cache
+expires: -1
+github-pages-bust: 20250127-1530
